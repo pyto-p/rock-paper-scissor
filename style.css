@@ -9,15 +9,15 @@ body {
 }
 
 button {
-    width: 500px;
-    height: 500px;
+    width: 25em;
+    height: 25em;
     /* border: 2px solid #ABC4AB; */
     background-color: #727D71;
     border-radius: 2em;
 }
 
 img {
-    width: 400px;
+    width: 20em;
     padding: 20px;
 }
 
@@ -33,7 +33,7 @@ p {
     /* justify-content: center; */
     padding: 50px;
     padding: 13px;
-    gap: 50px;
+    gap: 2em;
 }
 
 h1 {
