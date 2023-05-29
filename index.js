@@ -1,5 +1,7 @@
 let attack = document.querySelector(".atk");
 let result = document.querySelector(".result");
+let humanSide = document.querySelector(".human-side");
+let cpuSide = document.querySelector(".cpu-side");
 
 // CPU's Side
 function getCpuAtk() {
@@ -29,8 +31,8 @@ function getResult() {
     humanAtk = attack.textContent;
     computerAtk = getCpuAtk();
 
-    console.log(humanAtk);
-    console.log(computerAtk);
+    humanSide.src = humanAtk + ".png";
+    cpuSide.src = computerAtk + ".png";
 
     if (computerAtk == "Rock" && humanAtk == "Scissor") {
         result.textContent = "Computer Wins!";
@@ -46,3 +48,4 @@ function getResult() {
         result.textContent = "Human Wins!";
     }
 }
+

@@ -53,3 +53,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.result-cont {
+    display: flex;
+    align-items: center;
+}
