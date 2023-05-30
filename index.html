@@ -6,33 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&
+    display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="whole-cont">
         <div class="header">    
-            <h1>Rock Paper Scissor</h1>
+            <h1 class="title">ROCK PAPER SCISSOR</h1>
         </div>
         <div class="buttons-cont">
-            <button onclick="getAtk('rock'); getResult()" class="rock-btn">
-                <img class="rock-icon" src="Rock.png"></img>
-            </button>
-            <button onclick="getAtk('paper'); getResult()" class="paper-btn">
-                <img class="paper-icon" src="Paper.png"></img>
-            </button>
-            <button onclick="getAtk('scissor'); getResult()" class="scissor-btn">
-                <img class="scissor-icon" src="Scissor.png"></img>
-            </button>
-            <p class="atk">None</p>
-        </div>
-        <div class="result-cont">
-            <div>
-                <img class="human-side" src="/paper.png" alt="">
+            <div class="title">
+                <h1>CHOOSE YOUR WEAPON!</h1>
             </div>
-            <div class="winner">
-                <h1 class="result">Who will win?</h1>
+            <div class="weapons-cont">
+                <button onclick="getAtk('rock'); getResult()" class="rock-btn">
+                    <img class="rock-icon" src="Rock.png"></img>
+                </button>
+                <button onclick="getAtk('paper'); getResult()" class="paper-btn">
+                    <img class="paper-icon" src="Paper.png"></img>
+                </button>
+                <button onclick="getAtk('scissor'); getResult()" class="scissor-btn">
+                    <img class="scissor-icon" src="Scissor.png"></img>
+                </button>
+                <p class="atk">None</p>
             </div>
-            <div>
-                <img class="cpu-side" src="/rock.png" alt="">
+            <div class="result-cont">
+                <div class="human-result">
+                    <h3>Human</h3>
+                    <img class="human-side" src="/human.png" alt="">
+                </div>
+                <div class="winner">
+                    <h3>BEST OF 5</h3>
+                    <h3 class="result">WHO WILL WIN?</h3>
+                    <div class="scores-cont">
+                        <div>
+                            <p class="human-flag"></p>
+                            <p class="human-score">0</p>
+                        </div>
+                        <div>
+                            <h3>-</h3>
+                        </div>
+                        <div>
+                            <p class="cpu-flag"></p>
+                            <p class="cpu-score">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cpu-result">
+                    <h3>CPU</h3>
+                    <img class="cpu-side" src="/robot.png" alt="">
+                </div>
             </div>
         </div>
     </div>

@@ -5,56 +5,109 @@
 }
 
 body {
-    background-color: #6D4C3D;
+    background-color: #F1E0C5;
 }
 
-button {
-    width: 25em;
-    height: 25em;
-    /* border: 2px solid #ABC4AB; */
-    background-color: #727D71;
-    border-radius: 2em;
-}
 
 img {
     width: 20em;
     padding: 20px;
 }
 
-p {
+.atk, .human-score, .cpu-score {
     display: none;
     font-size: 0px;
 }
 
 .whole-cont { 
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    padding: 50px;
-    padding: 13px;
-    gap: 2em;
+    justify-content: space-around;
 }
 
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2em;
     color: #DCC9B6;
-    border: 2px solid #ABC4AB;
-    background-color: #727D71;
-    padding: 50px;
-    border-radius: 3em;
+}
+
+.header {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #C9B79C;
+}
+
+.header .title {
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 4em;
+    color: #342A21;
+    border: none;
+    width: auto;
 }
 
 .buttons-cont {
+    background-color: #342A21;
+    width: 100vw;
+    flex: 6;
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.buttons-cont .title > h1 {
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 3em;
+    color: #C9B79C;
+    margin-top: 30px;
+}
+
+.weapons-cont {
+    background-color: #C9B79C;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.weapons-cont > button {
+    width: 25em;
+    height: 25em;
+    background-color: #342A21;
 }
 
 .result-cont {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.result-cont img {
+    width: 15em;
+}
+
+.human-result > h3, .cpu-result > h3, .winner > h3 {
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 2.5em;
+    color: #C9B79C;
+    text-align: center;
+}
+
+.scores-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 2em;
+    color: #C9B79C;
 }
