@@ -43,7 +43,7 @@ function getResult() {
 
     overallNum = cpuNum + humanNum;
 
-    if (overallNum < 4 && (cpuNum < 3 && humanNum < 3)) {
+    if (overallNum < 5 && (cpuNum < 3 && humanNum < 3)) {
         if (computerAtk == "Rock" && humanAtk == "Scissor") {
             cpuNum += 1;
             cpuFlag.textContent = cpuFlag.textContent + "🚩";
@@ -59,6 +59,8 @@ function getResult() {
             cpuScore.innerHTML = cpuNum; 
             cpuFlag.textContent = cpuFlag.textContent + "🚩";
             console.log(overallNum);
+        } else if (computerAtk == humanAtk) {
+            // do nothing if it's draw.
         } else if (humanAtk == "None") {
             result.textContent = "Who will win?";
         } else {
