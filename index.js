@@ -10,6 +10,7 @@ let humanNum = 0;
 let cpuNum = 0;
 
 console.log(humanNum + 1);
+
 // CPU's Side
 function getCpuAtk() {
     let computerAtk = Math.floor(Math.random() * 3) + 1;
@@ -36,6 +37,7 @@ function getAtk(clickAtk) {
 //CPU vs Human
 function getResult() {
     humanAtk = attack.textContent;
+    console.log(humanAtk);
     computerAtk = getCpuAtk();
 
     humanSide.src = humanAtk + ".png";
@@ -62,15 +64,15 @@ function getResult() {
         } else if (computerAtk == humanAtk) {
             // do nothing if it's draw.
         } else if (humanAtk == "None") {
-            result.textContent = "Who will win?";
+            result.textContent = "Who WILL WIN?";
         } else {
             humanNum += 1;
             humanFlag.textContent = humanFlag.textContent + "🚩";
-            humanScore.innerHTML = humanNum; 
+            humanScore.innerHTML = humanNum;
             console.log(overallNum);
         }
-    } 
-    
+    }
+
     if (!(overallNum < 5 && (cpuNum < 3 && humanNum < 3))) {
         if (humanNum >= 3 && humanNum > cpuNum){
             result.innerHTML = "HUMAN WINS!";
