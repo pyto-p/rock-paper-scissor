@@ -22,7 +22,7 @@ function getCpuAtk() {
     }
 }
 
-//Human Side   
+//Human Side
 function getAtk(clickAtk) {
     if (clickAtk == "rock") {
         attack.textContent = "Rock";
@@ -33,7 +33,7 @@ function getAtk(clickAtk) {
     }
 }
 
-//CPU vs Human 
+//CPU vs Human
 function getResult() {
     humanAtk = attack.textContent;
     computerAtk = getCpuAtk();
@@ -47,16 +47,16 @@ function getResult() {
         if (computerAtk == "Rock" && humanAtk == "Scissor") {
             cpuNum += 1;
             cpuFlag.textContent = cpuFlag.textContent + "🚩";
-            cpuScore.innerHTML = cpuNum; 
+            cpuScore.innerHTML = cpuNum;
             console.log(overallNum);
         } else if (computerAtk == "Scissor" && humanAtk == "Paper") {
             cpuNum += 1;
-            cpuScore.innerHTML = cpuNum; 
+            cpuScore.innerHTML = cpuNum;
             cpuFlag.textContent = cpuFlag.textContent + "🚩";
             console.log(overallNum);
         } else if (computerAtk == "Paper" && humanAtk == "Rock") {
             cpuNum += 1;
-            cpuScore.innerHTML = cpuNum; 
+            cpuScore.innerHTML = cpuNum;
             cpuFlag.textContent = cpuFlag.textContent + "🚩";
             console.log(overallNum);
         } else if (computerAtk == humanAtk) {
@@ -69,7 +69,9 @@ function getResult() {
             humanScore.innerHTML = humanNum; 
             console.log(overallNum);
         }
-    } else {
+    } 
+    
+    if (!(overallNum < 5 && (cpuNum < 3 && humanNum < 3))) {
         if (humanNum >= 3 && humanNum > cpuNum){
             result.innerHTML = "HUMAN WINS!";
         } else {
